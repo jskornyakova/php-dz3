@@ -1,0 +1,15 @@
+<div class="adduser">
+    <a href="/?c=user&a=add">Add new user</a>
+</div>
+<div class="users">
+    {% for user in users %}
+        <h1>{{ user.login }}</h1>
+        <a href='/?c=user&a=one&id={{ user.id }}'>More detailed</a>
+        {% else %}
+        <p>No found</p>
+    {% endfor %}
+
+
+<?php
+
+</div>

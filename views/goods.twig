@@ -1,0 +1,13 @@
+<div class="products">
+    {% for good in goods %}
+        <div class='product'>
+            <img src='../img/{{ good.img }}'>
+            <h2>{{ good.name }}</h2>
+            <a href='/?c=good&a=one&id={{ good.id }}'>
+                <button>Description</button>
+            </a>
+        </div>
+    {% else %}
+        <p>No found</p>
+    {% endfor %}
+</div>
