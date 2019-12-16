@@ -1,0 +1,17 @@
+{% extends "layouts/main.twig" %}
+{% block title %} Catalog {% endblock %}
+{% block content %}
+<div class="products">
+    {% for good in goods %}
+        <div class='product'>
+            <img src='/img/{{ good.img }}'>
+            <h2>{{ good.name }}</h2>
+            <a href='/good/one/?id={{ good.id }}'>
+                <button>Description</button>
+            </a>
+        </div>
+    {% else %}
+        <p>No found</p>
+    {% endfor %}
+</div>
+{% endblock %}
