@@ -1,0 +1,19 @@
+{% extends "layouts/main.twig" %}
+{% block title %} {{ good.name }} {% endblock %}
+{% block content %}
+<div class='products'>
+    <div class='product'>
+        <img src='/img/{{ good.img }}'>
+        <h2>{{ good.name }}</h2>
+        <p>{{ good.description }}</p>
+        <h2>{{ good.price }} $</h2>
+        <a href='/order/add/?id={{ good.id }}'>
+            <button>Buy</button>
+        </a>
+    </div>
+
+</div>
+<a href='/good'>To go back</a>
+{% endblock %}
+
+

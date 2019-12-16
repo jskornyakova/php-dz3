@@ -1,0 +1,10 @@
+{% extends "layouts/main.twig" %}
+{% block title %} Hi, {{ user.name }} {% endblock %}
+{% block content %}
+<div class="user">
+    <h1>{{ user.login }}</h1>
+    <p>
+        <a href="/user/update/?id={{ user.id }}">Edit User</a>
+    </p>
+</div>
+{% endblock %}
